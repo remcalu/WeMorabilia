@@ -49,3 +49,24 @@ You don’t have to ever use `eject`. The curated feature set is suitable for sm
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
 To learn React, check out the [React documentation](https://reactjs.org/).
+
+## Website Wireframe Sketch
+This section is dedicated to the wireframes that I quickly drew up to give a basic preliminary idea of how the website will be setup
+
+#### Home Page
+![Home Page](https://i.imgur.com/nEes1MO.png)
+
+#### Scrabook Page
+![Scrabook Page](https://i.imgur.com/kf0nIPi.png)
+
+#### Collaborators Page
+![Collaborators Page](https://i.imgur.com/XDp0xU9.png)
+
+#### About Page
+![About Page](https://i.imgur.com/uMmwckY.png)
+
+#### Login Page
+![Login Page](https://i.imgur.com/kWvR4Gv.png)
+
+#### 404 Page
+![404 Page](https://i.imgur.com/fcH9xXk.png)
