@@ -14,4 +14,3 @@ const NavbarButton = styled(Button)<ButtonProps>(({ theme }) => ({
 }));
 
 export default NavbarButton;
-

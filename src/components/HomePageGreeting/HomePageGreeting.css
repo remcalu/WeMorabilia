@@ -17,15 +17,16 @@
 
 .HomePageGreeting-main-title-text {
    margin: 0;
-
-   animation: fadeIn linear 1s;
-   -webkit-animation: fadeIn linear 1s;
-   -moz-animation: fadeIn linear 1s;
-   -o-animation: fadeIn linear 1s;
-   -ms-animation: fadeIn linear 1s;
 }
 
- 
+.HomePageGreeting-fade-in {
+   animation: fadeIn linear 333ms;
+   -webkit-animation: fadeIn linear 333ms;
+   -moz-animation: fadeIn linear 333ms;
+   -o-animation: fadeIn linear 333ms;
+   -ms-animation: fadeIn linear 333ms;
+}
+
 @keyframes fadeIn {
    
    0% {opacity:0;}
