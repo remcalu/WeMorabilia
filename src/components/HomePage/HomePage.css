@@ -1,20 +1,20 @@
-.App {
+.HomePage {
   text-align: center;
 }
 
-.App-logo {
+.HomePage-logo {
   height: 40vmin;
   pointer-events: none;
 }
 
 @media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+  .HomePage-logo {
+    animation: HomePage-logo-spin infinite 20s linear;
   }
 }
 
-.App-header {
-  background-color: #282c34;
+.HomePage-header {
+  background-color: #212226;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -24,11 +24,11 @@
   color: white;
 }
 
-.App-link {
+.HomePage-link {
   color: #61dafb;
 }
 
-@keyframes App-logo-spin {
+@keyframes HomePage-logo-spin {
   from {
     transform: rotate(0deg);
   }
