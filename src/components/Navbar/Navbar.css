@@ -1,0 +1,18 @@
+.Navbar {
+   padding-top: 10px;
+   background-color: #212226;
+}
+
+.Navbar-logo {
+   width: 100px;
+   height: 50px;
+   border-radius: 10px;
+}
+
+.Navbar-section-side {
+   flex-grow: 1;
+}
+
+.Navbar-section-middle {
+   flex-grow: 8;
+}
