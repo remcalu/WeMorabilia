@@ -1,0 +1,53 @@
+.HomePageGreeting-header {
+   background-color: #212226;
+   min-height: 100vh;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: flex-start;
+   font-size: calc(8px + 2vmin);
+   color: white;
+   padding-left: 40vh;
+   padding-right: 40vh;
+}
+
+.HomePageGreeting-main-image {
+   height: 25vw;
+}
+
+.HomePageGreeting-main-title-text {
+   margin: 0;
+
+   animation: fadeIn linear 1s;
+   -webkit-animation: fadeIn linear 1s;
+   -moz-animation: fadeIn linear 1s;
+   -o-animation: fadeIn linear 1s;
+   -ms-animation: fadeIn linear 1s;
+}
+
+ 
+@keyframes fadeIn {
+   
+   0% {opacity:0;}
+   100% {opacity:1;}
+}
+
+@-moz-keyframes fadeIn {
+   0% {opacity:0;}
+   100% {opacity:1;}
+}
+
+@-webkit-keyframes fadeIn {
+   0% {opacity:0;}
+   100% {opacity:1;}
+}
+
+@-o-keyframes fadeIn {
+   0% {opacity:0;}
+   100% {opacity:1;}
+}
+
+@-ms-keyframes fadeIn {
+   0% {opacity:0;}
+   100% {opacity:1;}
+}
