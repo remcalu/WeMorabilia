@@ -1,9 +1,10 @@
 import './ScrapbookPageCard.css';
-import { Card, CardMedia, CardContent, Typography } from '@mui/material';
+import PropTypes from 'prop-types';
+import {Card, CardMedia, CardContent, Typography} from '@mui/material';
 
 function ScrapbookPageCard(props) {
   return (
-    <Card className="ScrapbookPageCard" style={{backgroundColor: "#40454b"}} variant="elevation" sx={{ width: 250, height: 300 }}>
+    <Card className="ScrapbookPageCard" style={{backgroundColor: '#40454b'}} variant="elevation" sx={{width: 250, height: 300}}>
       <Card variant="elevation">
         <CardMedia
           component="img"
@@ -20,5 +21,9 @@ function ScrapbookPageCard(props) {
     </Card>
   );
 }
+
+ScrapbookPageCard.propTypes = {
+  image: PropTypes.string
+};
 
 export default ScrapbookPageCard;

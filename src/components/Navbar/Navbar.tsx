@@ -1,7 +1,7 @@
 import './Navbar.css';
 import logo from '../../resources/WMSquare.jpg';
 
-import { AppBar, Box, Toolbar } from '@mui/material';
+import {AppBar, Box, Toolbar} from '@mui/material';
 import NavbarButton from '../NavbarButton/NavbarButton';
 
 function Navbar() {
@@ -25,7 +25,7 @@ function Navbar() {
             <NavbarButton variant="contained" className="Navbar-item">
               About
             </NavbarButton>
-            </div>
+          </div>
           <div className="Navbar-section-side">
             <NavbarButton variant="contained">Login</NavbarButton>
           </div>
