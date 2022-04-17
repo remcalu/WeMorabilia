@@ -1,6 +1,6 @@
 import './ScrapbookPage.css';
 import ScrapbookPageContent from '../ScrapbookPageContent/ScrapbookPageContent';
-import Navbar from '../Navbar/Navbar'
+import Navbar from '../Navbar/Navbar';
 
 function ScrapbookPage() {
   return (

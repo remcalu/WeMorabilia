@@ -1,7 +1,7 @@
-import { Routes, Route } from "react-router-dom";
+import {Routes, Route} from 'react-router-dom';
 
 import ReactDOM from 'react-dom/client';
-import { BrowserRouter  } from 'react-router-dom';
+import {BrowserRouter} from 'react-router-dom';
 import './index.css';
 
 import HomePage from './components/HomePage/HomePage';
