@@ -7,16 +7,16 @@ import NavbarButton from '../NavbarButton/NavbarButton';
 function Navbar() {
   return (
     <Box>
-      <AppBar  position="static">
+      <AppBar position="static">
         <Toolbar className="Navbar">
           <div className="Navbar-section-side">
             <img src={logo} className="Navbar-logo" alt="logo" />
           </div>
           <div className="Navbar-section-middle">
-            <NavbarButton variant="contained" className="Navbar-item">
+            <NavbarButton href='/home' variant="contained" className="Navbar-item">
               Home
             </NavbarButton>
-            <NavbarButton variant="contained" className="Navbar-item">
+            <NavbarButton href='/scrapbook' variant="contained" className="Navbar-item">
               Scrapbook
             </NavbarButton>
             <NavbarButton variant="contained" className="Navbar-item">
