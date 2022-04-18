@@ -24,3 +24,11 @@
 .ErrorPage-main-button-container {
    margin-top: 30px;
 }
+
+.ErrorPage-main-button {
+   background-color: #363940 !important;
+}
+
+.ErrorPage-main-button:hover {
+   background-color: #40454b !important;
+}

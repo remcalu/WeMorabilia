@@ -2,4 +2,92 @@
    text-align: center;
    margin: auto;
    display: block;
+   background-color: #40454b !important;
+   width: 250px !important;
+   height: 300px !important;
+}
+
+.ScrapbookPageCard-text {
+   height: 100px;
+}
+
+.ScrapbookPageCard-container {
+   height: 300px;
+   text-align: center;
+   margin: auto;
+   display: block;
+}
+
+.ScrapbookPageCard-modal {
+   position: absolute !important;
+   top: 50% !important;
+   left: 50% !important;
+   transform: translate(-50%, -50%) !important;
+   width: 80% !important;
+   height: 80% !important;
+   background-color: #40454b !important;
+   box-shadow: 0px 1px 10px black !important;
+   border-radius: 10px;
+   padding: 20px !important;
+}
+
+.ScrapbookPageCard-modal-container-top {
+   display: flex;
+   height: 80% !important;
+}
+
+.ScrapbookPageCard-modal-container-top-image {
+   max-width: 100%;
+   max-height: 100%;
+   margin: auto;
+   box-shadow: 0px 1px 10px black;
+}
+
+.ScrapbookPageCard-modal-container-bottom {
+   height: 15% !important;
+}
+
+.ScrapbookPageCard-modal-container-bottom-text {
+   text-align: center;
+   overflow: hidden;
+   text-overflow: ellipsis;
+   display: -webkit-box;
+   -webkit-box-orient: vertical;
+   -webkit-line-clamp: 3;
+   line-height: X;
+   max-height: X*3;
+}
+
+.ScrapbookPageCard-fade-in {
+   animation: fadeIn linear 333ms;
+   -webkit-animation: fadeIn linear 333ms;
+   -moz-animation: fadeIn linear 333ms;
+   -o-animation: fadeIn linear 333ms;
+   -ms-animation: fadeIn linear 333ms;
+}
+
+@keyframes fadeIn {
+   
+   0% {opacity:0;}
+   100% {opacity:1;}
+}
+
+@-moz-keyframes fadeIn {
+   0% {opacity:0;}
+   100% {opacity:1;}
+}
+
+@-webkit-keyframes fadeIn {
+   0% {opacity:0;}
+   100% {opacity:1;}
+}
+
+@-o-keyframes fadeIn {
+   0% {opacity:0;}
+   100% {opacity:1;}
+}
+
+@-ms-keyframes fadeIn {
+   0% {opacity:0;}
+   100% {opacity:1;}
 }
