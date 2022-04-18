@@ -26,6 +26,7 @@ module.exports = {
   },
   'rules': {
     'react/react-in-jsx-scope': 'off',
+    'react/jsx-key': 'off',
     'max-len': 'off',
     'comma-dangle': 'off',
     'require-jsdoc': 'off',

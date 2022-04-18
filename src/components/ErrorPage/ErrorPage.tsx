@@ -1,8 +1,6 @@
 import errorImage from '../../resources/404errorimg.jpg';
 import './ErrorPage.css';
-import ErrorButton from '../ErrorButton/ErrorButton';
-
-import {Box} from '@mui/material';
+import {Button, Box} from '@mui/material';
 
 function ErrorPage() {
   return (
@@ -12,9 +10,9 @@ function ErrorPage() {
         <h1 className="ErrorPage-main-text"> Error 404 </h1>
         <p className="ErrorPage-main-text"> Click the button below to get back to the main page </p>
         <div className="ErrorPage-main-button-container">
-          <ErrorButton href='/' variant="contained">
+          <Button className="ErrorPage-main-button" href='/' variant="contained">
             Go Home
-          </ErrorButton>
+          </Button>
         </div>
       </header>
     </Box>

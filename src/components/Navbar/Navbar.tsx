@@ -1,8 +1,7 @@
 import './Navbar.css';
 import logo from '../../resources/WMSquare.jpg';
 
-import {AppBar, Box, Toolbar} from '@mui/material';
-import NavbarButton from '../NavbarButton/NavbarButton';
+import {AppBar, Box, Toolbar, Button} from '@mui/material';
 
 function Navbar() {
   return (
@@ -13,21 +12,21 @@ function Navbar() {
             <img src={logo} className="Navbar-logo" alt="logo" />
           </div>
           <div className="Navbar-section-middle">
-            <NavbarButton href='/home' variant="contained" className="Navbar-item">
+            <Button className="Navbar-button" href='/home' variant="contained">
               Home
-            </NavbarButton>
-            <NavbarButton href='/scrapbook' variant="contained" className="Navbar-item">
+            </Button>
+            <Button className="Navbar-button" href='/scrapbook' variant="contained">
               Scrapbook
-            </NavbarButton>
-            <NavbarButton variant="contained" className="Navbar-item">
+            </Button>
+            <Button className="Navbar-button" variant="contained">
               Collaborators
-            </NavbarButton>
-            <NavbarButton variant="contained" className="Navbar-item">
+            </Button>
+            <Button className="Navbar-button" variant="contained">
               About
-            </NavbarButton>
+            </Button>
           </div>
           <div className="Navbar-section-side">
-            <NavbarButton variant="contained">Login</NavbarButton>
+            <Button className="Navbar-button" variant="contained">Login</Button>
           </div>
         </Toolbar>
       </AppBar>

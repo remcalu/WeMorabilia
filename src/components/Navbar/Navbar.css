@@ -16,3 +16,16 @@
 .Navbar-section-middle {
    flex-grow: 8;
 }
+
+.Navbar-button {
+   margin-left: 10px !important;
+   margin-top: 5px !important;
+   margin-right: 10px !important;
+   margin-bottom: 5px !important;
+   background-color: #363940 !important;
+   flex-grow: 1 !important;
+}
+
+.Navbar-button:hover {
+   background-color: #40454b !important;
+}
