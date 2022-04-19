@@ -1,19 +1,10 @@
 import './AmplifyAuthenticator.css';
+import AmplifyAuthenticatorComps from '../AmplifyAuthenticatorComps/AmplifyAuthenticatorComps';
 import {Authenticator} from '@aws-amplify/ui-react';
 import PropTypes from 'prop-types';
-import {Typography} from '@mui/material';
 import '@aws-amplify/ui-react/styles.css';
 
-
-const components = {
-  Header() {
-    return (
-      <Typography>
-        WeMorabilia Login Page
-      </Typography>
-    );
-  },
-};
+const allowSignUp = true;
 
 AmplifyAuthenticator.propTypes = {
   passedComponent: PropTypes.element,
@@ -21,8 +12,8 @@ AmplifyAuthenticator.propTypes = {
 
 function AmplifyAuthenticator(props) {
   return (
-    <Authenticator className='ScrapbookPage-auth' components={components}>
-      {({signOut, user}) => (props.passedComponent)}
+    <Authenticator hideSignUp={!allowSignUp} className='ScrapbookPage-auth' components={AmplifyAuthenticatorComps}>
+      {() => (props.passedComponent)}
     </Authenticator>
   );
 }

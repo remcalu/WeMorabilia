@@ -1,9 +1,14 @@
 import './Navbar.css';
+import useUserStatus from '../../utils/useUserStatus';
+import signOut from '../../utils/signOut';
 import logo from '../../resources/WMSquare.jpg';
-
 import {AppBar, Box, Toolbar, Button} from '@mui/material';
 
 function Navbar() {
+  const userStatus = useUserStatus();
+  const isLoggedIn = (null !== userStatus);
+  console.log(isLoggedIn);
+
   return (
     <Box>
       <AppBar position="static">
@@ -26,7 +31,14 @@ function Navbar() {
             </Button>
           </div>
           <div className="Navbar-section-side">
-            <Button className="Navbar-button" variant="contained">Login</Button>
+            {isLoggedIn ?
+              <Button className="Navbar-button" onClick={signOut} variant="contained">
+                Sign Out
+              </Button> :
+              <Button className="Navbar-button" href='/authenticate' variant="contained">
+                Sign in
+              </Button>
+            }
           </div>
         </Toolbar>
       </AppBar>
