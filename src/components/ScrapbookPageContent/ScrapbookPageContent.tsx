@@ -4,6 +4,7 @@ import img2 from '../../resources/albumPics/img2.jpg';
 import img3 from '../../resources/albumPics/img3.jpg';
 import img4 from '../../resources/albumPics/img4.jpeg';
 import ScrapbookPageCard from '../ScrapbookPageCard/ScrapbookPageCard';
+import ScrapbookPageCardAddImg from '../ScrapbookPageCardAddImg/ScrapbookPageCardAddImg';
 import {Grid} from '@mui/material';
 
 const images = [img1, img2, img3, img4, img1, img2, img3, img4, img1, img2, img3, img4, img1, img2, img3, img4, img2, img3, img4];
@@ -20,6 +21,9 @@ function ScrapbookPageContent() {
     <div className="ScrapbookPageContent">
       <div className="ScrapbookPageContent-body">
         <Grid className="ScrapbookPageContent-grid" container spacing={3}>
+          <Grid item xs="auto">
+            <ScrapbookPageCardAddImg/>
+          </Grid>
           {shuffledImages.map((image) =>
             <Grid item xs="auto" zeroMinWidth>
               <ScrapbookPageCard image={image} text={text} date={date}/>

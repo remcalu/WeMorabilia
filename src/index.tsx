@@ -8,6 +8,11 @@ import HomePage from './components/HomePage/HomePage';
 import ScrapbookPage from './components/ScrapbookPage/ScrapbookPage';
 import ErrorPage from './components/ErrorPage/ErrorPage';
 
+import Amplify from 'aws-amplify';
+import config from './aws-exports';
+
+Amplify.configure(config);
+
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );

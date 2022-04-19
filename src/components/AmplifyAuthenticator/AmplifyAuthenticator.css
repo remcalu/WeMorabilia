@@ -1,17 +1,3 @@
-.ScrapbookPage {
-   text-align: center;
-}
-.ScrapbookPage-auth {
-   text-align: center;
-   margin: auto;
-   display: flex;
-   flex-direction: row;
-   align-content: center;
-   justify-content: center;
-   background-color: #212226 ;
-   height: 100vh;
-}
-
 /* Overwriting default styling for amplify stuff */
 [data-amplify-container] {
    font-family: 'Roboto', sans-serif !important;

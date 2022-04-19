@@ -1,25 +1,16 @@
-.HomePageGreeting-header {
-   background-color: #212226;
-   min-height: 100vh;
+.ScrapbookPageCardAddImg {
+   text-align: center;
+   margin: auto;
    display: flex;
    flex-direction: column;
-   align-items: center;
-   justify-content: flex-start;
-   font-size: calc(8px + 2vmin);
-   color: white;
-   padding-left: 15vw;
-   padding-right: 15vw;
+   align-content: center;
+   justify-content: center;
+   background-color: #40454b !important;
+   width: 250px !important;
+   height: 300px !important;
 }
 
-.HomePageGreeting-main-image {
-   height: 25vw;
-}
-
-.HomePageGreeting-main-title-text {
-   margin: 0;
-}
-
-.HomePageGreeting-fade-in {
+.ScrapbookPageCardAddImg-fade-in {
    animation: fadeIn linear 333ms;
    -webkit-animation: fadeIn linear 333ms;
    -moz-animation: fadeIn linear 333ms;
