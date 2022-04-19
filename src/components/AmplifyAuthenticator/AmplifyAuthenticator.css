@@ -1,3 +1,6 @@
+/* NOTE: I recognize that this is a bad way of styling, but I thought 
+getting some practice with CSS selectors would be beneficial*/
+
 /* Overwriting default styling for amplify stuff */
 [data-amplify-container] {
    font-family: 'Roboto', sans-serif !important;
@@ -21,7 +24,7 @@
 }
 
 [data-amplify-container] > div > div > div:first-child * [aria-selected~=true] {
-   border-color: purple;
+   border-color: black;
 }
 
 /* Everything else below the 'Sign In' and 'Create Account' bar at the top */

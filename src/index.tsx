@@ -1,13 +1,9 @@
-import {Routes, Route} from 'react-router-dom';
-
+import {Routes, Route, BrowserRouter, Navigate} from 'react-router-dom';
 import ReactDOM from 'react-dom/client';
-import {BrowserRouter} from 'react-router-dom';
 import './index.css';
-
+import AmplifyAuthenticator from './components/AmplifyAuthenticator/AmplifyAuthenticator';
 import HomePage from './components/HomePage/HomePage';
 import ScrapbookPage from './components/ScrapbookPage/ScrapbookPage';
-import ErrorPage from './components/ErrorPage/ErrorPage';
-
 import Amplify from 'aws-amplify';
 import config from './aws-exports';
 
@@ -22,8 +18,9 @@ root.render(
     <Routes>
       <Route path="/home" element={<HomePage/>} />
       <Route path="/scrapbook" element={<ScrapbookPage/>} />
-      <Route path="/" element={<HomePage/>} />
-      <Route path="*" element={<ErrorPage/>} />
+      <Route path="/authenticate" element={<AmplifyAuthenticator passedComponent={<Navigate to="/"/>}/>} />
+      <Route path="/" element={<Navigate to="/home"/>} />
+      <Route path="*" element={<Navigate to="/home"/>}/>
     </Routes>
   </BrowserRouter>
 );
