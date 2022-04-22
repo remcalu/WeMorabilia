@@ -1,4 +1,3 @@
-import React from 'react';
 import './ScrapbookPageCardAddImg.css';
 import {Card, CardContent, Typography} from '@mui/material';
 import AddCircleOutlineIcon from '@mui/icons-material/AddCircleOutline';

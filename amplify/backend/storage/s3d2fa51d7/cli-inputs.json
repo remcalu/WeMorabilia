@@ -1,0 +1,18 @@
+{
+  "resourceName": "s3d2fa51d7",
+  "policyUUID": "d2fa51d7",
+  "bucketName": "wemorabilia22e90c4868164502b6288e5039a4a429",
+  "storageAccess": "authAndGuest",
+  "guestAccess": [
+    "CREATE_AND_UPDATE",
+    "READ",
+    "DELETE"
+  ],
+  "authAccess": [
+    "CREATE_AND_UPDATE",
+    "READ",
+    "DELETE"
+  ],
+  "triggerFunction": "NONE",
+  "groupAccess": {}
+}
