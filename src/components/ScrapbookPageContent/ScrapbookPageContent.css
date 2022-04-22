@@ -19,3 +19,87 @@
    align-items: flex-start;
    justify-content: center;
 }
+
+.ScrapbookPageCardAddImg {
+   text-align: center;
+   margin: auto;
+   display: flex;
+   flex-direction: column;
+   align-content: space-around !important;
+   justify-content: center !important;
+   background-color: #40454b !important;
+   width: 250px !important;
+   height: 300px !important;
+}
+
+.ScrapbookPageCardAddImg-button {
+   margin-left: 10px !important;
+   margin-top: 5px !important;
+   margin-right: 10px !important;
+   margin-bottom: 5px !important;
+   background-color: #363940 !important;
+}
+
+.ScrapbookPageCardAddImg-item {
+   text-align: center !important;
+   margin: auto !important;
+}
+
+.ScrapbookPageCardAddImg-item-input {
+   border-radius: 5px;
+   font-size: 15px;
+   padding-top: 6px;
+   padding-bottom: 6px;
+   background-color: #40454b;
+   border-width: 1px;
+   border-color: white !important;
+   color: white !important;
+   text-align: center !important;
+   margin: auto !important;
+}
+
+.ScrapbookPageCardAddImg-item-input::placeholder {
+   color: white;
+}
+
+.ScrapbookPageCardAddImg-item-input:focus {
+   outline: none !important;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+   filter: invert(1.0);
+}
+
+.ScrapbookPageCardAddImg-fade-in {
+   animation: fadeIn linear 333ms;
+   -webkit-animation: fadeIn linear 333ms;
+   -moz-animation: fadeIn linear 333ms;
+   -o-animation: fadeIn linear 333ms;
+   -ms-animation: fadeIn linear 333ms;
+}
+
+@keyframes fadeIn {
+   
+   0% {opacity:0;}
+   100% {opacity:1;}
+}
+
+@-moz-keyframes fadeIn {
+   0% {opacity:0;}
+   100% {opacity:1;}
+}
+
+@-webkit-keyframes fadeIn {
+   0% {opacity:0;}
+   100% {opacity:1;}
+}
+
+@-o-keyframes fadeIn {
+   0% {opacity:0;}
+   100% {opacity:1;}
+}
+
+@-ms-keyframes fadeIn {
+   0% {opacity:0;}
+   100% {opacity:1;}
+}

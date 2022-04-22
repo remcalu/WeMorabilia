@@ -7,7 +7,6 @@ import {AppBar, Box, Toolbar, Button} from '@mui/material';
 function Navbar() {
   const userStatus = useUserStatus();
   const isLoggedIn = (null !== userStatus);
-  console.log(isLoggedIn);
 
   return (
     <Box>

@@ -18,13 +18,7 @@ function ScrapbookPageCard(props) {
     <Card className="ScrapbookPageCard ScrapbookPageCard-fade-in" variant="elevation">
       <CardActionArea onClick={handleOpen}>
         <Card variant="elevation">
-          <CardMedia
-            component="img"
-            height="233px"
-            width="233px"
-            image={props.image}
-            alt="green iguana"
-          />
+          <CardMedia component="img" height="233px" width="233px" image={props.image} alt="green iguana"/>
         </Card>
         <CardContent >
           <Typography noWrap variant="body2" color="white">
@@ -36,19 +30,10 @@ function ScrapbookPageCard(props) {
         </CardContent>
       </CardActionArea>
 
-      <Modal
-        open={open}
-        onClose={handleClose}
-        aria-labelledby="modal-modal-title"
-        aria-describedby="modal-modal-description"
-      >
+      <Modal open={open} onClose={handleClose} aria-labelledby="modal-modal-title" aria-describedby="modal-modal-description">
         <Box className="ScrapbookPageCard-modal">
           <div className="ScrapbookPageCard-modal-container-top">
-            <img
-              className='ScrapbookPageCard-modal-container-top-image'
-              src={props.image}
-              alt="image"
-            />
+            <img className='ScrapbookPageCard-modal-container-top-image' src={props.image} alt="image"/>
           </div>
           <div className="ScrapbookPageCard-modal-container-bottom">
             <CardContent >
