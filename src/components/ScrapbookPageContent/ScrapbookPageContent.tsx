@@ -64,26 +64,23 @@ function ScrapbookPageContent() {
             <Card className="ScrapbookPageCardAddImg ScrapbookPageCardAddImg-fade-in" variant="elevation">
               <div className='ScrapbookPageCardAddImg-item'>
                 <FileUploadIcon onClick={clickUpload} sx={{fontSize: 100, color: 'white'}}/>
+                <input id="fileUpload" type="file" hidden onChange={onChange}/>
+              </div>
+              <div>
                 <input
-                  id="fileUpload"
-                  type="file"
-                  hidden
-                  onChange={onChange}
+                  className='ScrapbookPageCardAddImg-item ScrapbookPageCardAddImg-item-input'
+                  onChange={(e) => setFormData({...formData, 'description': e.target.value})}
+                  placeholder="Description"
+                  value={formData.description}
+                />
+                <input
+                  type="date"
+                  className='ScrapbookPageCardAddImg-item ScrapbookPageCardAddImg-item-input'
+                  onChange={(e) => setFormData({...formData, 'date': e.target.value})}
+                  placeholder="Date"
+                  value={formData.date}
                 />
               </div>
-              <input
-                className='ScrapbookPageCardAddImg-item ScrapbookPageCardAddImg-item-input'
-                onChange={(e) => setFormData({...formData, 'description': e.target.value})}
-                placeholder="Description"
-                value={formData.description}
-              />
-              <input
-                type="date"
-                className='ScrapbookPageCardAddImg-item ScrapbookPageCardAddImg-item-input'
-                onChange={(e) => setFormData({...formData, 'date': e.target.value})}
-                placeholder="Date"
-                value={formData.date}
-              />
               <Button variant="contained" className="ScrapbookPageCardAddImg-button ScrapbookPageCardAddImg-item" onClick={createImageEntry}>Add Image</Button>
             </Card>
           </Grid>

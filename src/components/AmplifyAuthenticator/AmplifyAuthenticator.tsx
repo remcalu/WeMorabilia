@@ -4,15 +4,13 @@ import {Authenticator} from '@aws-amplify/ui-react';
 import PropTypes from 'prop-types';
 import '@aws-amplify/ui-react/styles.css';
 
-const allowSignUp = true;
-
 AmplifyAuthenticator.propTypes = {
   passedComponent: PropTypes.element,
 };
 
 function AmplifyAuthenticator(props) {
   return (
-    <Authenticator hideSignUp={!allowSignUp} className='ScrapbookPage-auth' components={AmplifyAuthenticatorComps}>
+    <Authenticator className='ScrapbookPage-auth' components={AmplifyAuthenticatorComps}>
       {() => (props.passedComponent)}
     </Authenticator>
   );

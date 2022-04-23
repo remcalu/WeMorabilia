@@ -46,16 +46,17 @@
 }
 
 .ScrapbookPageCardAddImg-item-input {
+   width: 80%;
    border-radius: 5px;
    font-size: 15px;
    padding-top: 6px;
    padding-bottom: 6px;
-   background-color: #40454b;
+   background-color: #363940;
    border-width: 1px;
+   margin-bottom: 10px !important;
    border-color: white !important;
    color: white !important;
    text-align: center !important;
-   margin: auto !important;
 }
 
 .ScrapbookPageCardAddImg-item-input::placeholder {

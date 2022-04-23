@@ -1,6 +1,11 @@
 /* NOTE: I recognize that this is a bad way of styling, but I thought 
 getting some practice with CSS selectors would be beneficial*/
 
+/* Removing 'create account' option */
+[role="tablist"] {
+   display: none !important;
+}
+
 /* Overwriting default styling for amplify stuff */
 [data-amplify-container] {
    font-family: 'Roboto', sans-serif !important;

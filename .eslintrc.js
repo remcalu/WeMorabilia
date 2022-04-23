@@ -25,6 +25,7 @@ module.exports = {
     }
   },
   'rules': {
+    'linebreak-style': 'off',
     'react/react-in-jsx-scope': 'off',
     'react/jsx-key': 'off',
     'max-len': 'off',

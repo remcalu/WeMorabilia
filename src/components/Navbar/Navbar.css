@@ -3,6 +3,10 @@
    background-color: #212226;
 }
 
+.Navbar-dropdown {
+   display: none !important;
+}
+
 .Navbar-logo {
    width: 100px;
    height: 50px;
@@ -28,4 +32,33 @@
 
 .Navbar-button:hover {
    background-color: #40454b !important;
+}
+
+@media (max-width:800px){ 
+   .Navbar {
+      display: none !important;
+   } 
+
+   .Navbar-dropdown {
+      background-color: #212226;
+      display: flex !important;
+   }
+
+   .Navbar-dropdown-logo {
+      margin-top: 5px;
+      width: 75px;
+      height: 33px;
+      border-radius: 10px;
+   }
+
+   .Navbar-dropdown-button {
+      margin-left: 10px;
+      margin-right: 10px;
+   }
+
+   .Navbar-dropdown-button:hover {
+      color: #b9bbc0 !important;
+      margin-left: 10px;
+      margin-right: 10px;
+   }
 }
