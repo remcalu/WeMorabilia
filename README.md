@@ -5,16 +5,18 @@ Redux
 Material UI
 Jest
 React testing library
+Amplfiy
+GraphQL
 ````
 
 ## Available Scripts
 
 ### `npm start`
-Runs the app in the development mode, open [http://localhost:3000](http://localhost:3000) to view it in the browser. The page will reload if you make edits, lint errors will be seen in the console.
+Generates amplify GraphQL code by running `amplify codegen`, and then runs the app in the development mode through `react-scripts start`, open [http://localhost:3000](http://localhost:3000) to view it in the browser. The page will reload if you make edits, lint errors will be seen in the console.
 
 
 ### `npm test`
-Launches the test runner in the interactive watch mode.
+Generates amplify GraphQL code by running `amplify codegen`, and then launches the test runner in the interactive watch mode through `react-scripts test`.
 
 
 ### `npm run build`
