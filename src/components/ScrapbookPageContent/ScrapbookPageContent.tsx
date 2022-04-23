@@ -4,8 +4,9 @@ import {API, Storage} from 'aws-amplify';
 import {useState, useEffect} from 'react';
 import {Grid, Card, Button} from '@mui/material';
 import FileUploadIcon from '@mui/icons-material/FileUpload';
+import CancelIcon from '@mui/icons-material/Cancel';
 import {listImageEntries} from '../../graphql/queries';
-import {createImageEntry as createImageEntryMutation} from '../../graphql/mutations';
+import {createImageEntry as createImageEntryMutation, deleteImageEntry as deleteImageEntryMutation} from '../../graphql/mutations';
 
 const initialFormState = {image: '', description: '', date: ''};
 
@@ -34,7 +35,7 @@ function ScrapbookPageContent() {
 
   async function createImageEntry() {
     // @ts-ignore: Unreachable code error
-    if (!formData.description || !formData.date) return;
+    if (!formData.description || !formData.image || !formData.date) return;
     await API.graphql({query: createImageEntryMutation, variables: {input: formData}});
     if (formData.image) {
       const image = await Storage.get(formData.image);
@@ -42,6 +43,12 @@ function ScrapbookPageContent() {
     }
     setImageEntries([...imageEntries, formData]);
     setFormData(initialFormState);
+  }
+
+  async function deleteImageEntry({id}) {
+    const newImageEntriesArray = imageEntries.filter((imageEntry) => imageEntry.id !== id);
+    setImageEntries(newImageEntriesArray);
+    await API.graphql({query: deleteImageEntryMutation, variables: {input: {id}}});
   }
 
   async function onChange(e) {
@@ -87,6 +94,7 @@ function ScrapbookPageContent() {
           {imageEntries.map((imageEntry) =>
             <Grid item xs="auto" zeroMinWidth>
               <ScrapbookPageCard image={imageEntry.image} text={imageEntry.description} date={imageEntry.date}/>
+              <CancelIcon className="ScrapbookPageContent-delete-item" onClick={() => deleteImageEntry(imageEntry)} sx={{fontSize: 40, color: '#40454b'}}/>
             </Grid>
           )}
         </Grid>

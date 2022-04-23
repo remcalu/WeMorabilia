@@ -67,6 +67,14 @@
    outline: none !important;
 }
 
+.ScrapbookPageContent-delete-item {
+   margin-top: 5px;
+}
+
+.ScrapbookPageContent-delete-item:hover {
+   color: rgb(162, 52, 52);
+}
+
 input[type="date"]::-webkit-calendar-picker-indicator {
    filter: invert(1.0);
 }
