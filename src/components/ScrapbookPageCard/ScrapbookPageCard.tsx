@@ -1,7 +1,8 @@
 import React from 'react';
-import './ScrapbookPageCard.css';
 import PropTypes from 'prop-types';
 import {Card, CardMedia, CardActionArea, CardContent, Typography, Box, Modal} from '@mui/material';
+
+import './ScrapbookPageCard.css';
 
 ScrapbookPageCard.propTypes = {
   image: PropTypes.string,
@@ -18,7 +19,7 @@ function ScrapbookPageCard(props) {
     <Card className="ScrapbookPageCard ScrapbookPageCard-fade-in" variant="elevation">
       <CardActionArea onClick={handleOpen}>
         <Card variant="elevation">
-          <CardMedia component="img" height="233px" width="233px" image={props.image} alt="green iguana"/>
+          <CardMedia component="img" height="233px" width="233px" image={props.image} alt="an image"/>
         </Card>
         <CardContent >
           <Typography noWrap variant="body2" color="white">

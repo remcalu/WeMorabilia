@@ -1,10 +1,11 @@
-import './ScrapbookPageContent.css';
-import ScrapbookPageCard from '../ScrapbookPageCard/ScrapbookPageCard';
 import {API, Storage} from 'aws-amplify';
 import {useState, useEffect} from 'react';
 import {Grid, Card, Button} from '@mui/material';
 import FileUploadIcon from '@mui/icons-material/FileUpload';
 import CancelIcon from '@mui/icons-material/Cancel';
+
+import './ScrapbookPageContent.css';
+import ScrapbookPageCard from '../ScrapbookPageCard/ScrapbookPageCard';
 import {listImageEntries} from '../../graphql/queries';
 import {createImageEntry as createImageEntryMutation, deleteImageEntry as deleteImageEntryMutation} from '../../graphql/mutations';
 
@@ -20,7 +21,7 @@ function ScrapbookPageContent() {
 
   async function fetchImageEntries() {
     const apiData = await API.graphql({query: listImageEntries});
-    // @ts-ignore: Unreachable code error
+    // @ts-ignore
     const imageEntriesFromAPI = apiData.data.listImageEntries.items;
     await Promise.all(imageEntriesFromAPI.map(async (imageEntry) => {
       if (imageEntry.image) {
@@ -29,12 +30,17 @@ function ScrapbookPageContent() {
       }
       return imageEntry;
     }));
-    // @ts-ignore: Unreachable code error
-    setImageEntries(apiData.data.listImageEntries.items);
+
+    // @ts-ignore
+    const imageEntriesSorted = apiData.data.listImageEntries.items;
+    imageEntriesSorted.sort((a, b)=>{
+      return new Date(b.date).valueOf() - new Date(a.date).valueOf();
+    });
+    setImageEntries(imageEntriesSorted);
   }
 
   async function createImageEntry() {
-    // @ts-ignore: Unreachable code error
+    // @ts-ignore
     if (!formData.description || !formData.image || !formData.date) return;
     await API.graphql({query: createImageEntryMutation, variables: {input: formData}});
     if (formData.image) {
@@ -70,7 +76,7 @@ function ScrapbookPageContent() {
           <Grid item xs="auto">
             <Card className="ScrapbookPageCardAddImg ScrapbookPageCardAddImg-fade-in" variant="elevation">
               <div className='ScrapbookPageCardAddImg-item'>
-                <FileUploadIcon onClick={clickUpload} sx={{fontSize: 100, color: 'white'}}/>
+                <FileUploadIcon className="ScrapbookPageCardAddImg-upload" onClick={clickUpload}/>
                 <input id="fileUpload" type="file" hidden onChange={onChange}/>
               </div>
               <div>
@@ -94,7 +100,7 @@ function ScrapbookPageContent() {
           {imageEntries.map((imageEntry) =>
             <Grid item xs="auto" zeroMinWidth>
               <ScrapbookPageCard image={imageEntry.image} text={imageEntry.description} date={imageEntry.date}/>
-              <CancelIcon className="ScrapbookPageContent-delete-item" onClick={() => deleteImageEntry(imageEntry)} sx={{fontSize: 40, color: '#40454b'}}/>
+              <CancelIcon className="ScrapbookPageContent-delete-item" onClick={() => deleteImageEntry(imageEntry)}/>
             </Grid>
           )}
         </Grid>

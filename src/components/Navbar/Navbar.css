@@ -52,6 +52,7 @@
    }
 
    .Navbar-dropdown-button {
+      transform: scale(1.5);
       margin-left: 10px;
       margin-right: 10px;
    }

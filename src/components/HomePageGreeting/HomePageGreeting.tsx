@@ -1,7 +1,7 @@
+import {Box} from '@mui/material';
+
 import greetingImage from '../../resources/photoframe.png';
 import './HomePageGreeting.css';
-
-import {Box} from '@mui/material';
 
 function HomePageGreeting() {
   return (

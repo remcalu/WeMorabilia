@@ -40,6 +40,16 @@
    background-color: #363940 !important;
 }
 
+.ScrapbookPageCardAddImg-upload {
+   transform: scale(4);
+   color: white;
+}
+
+.ScrapbookPageCardAddImg-upload:hover {
+   color: #b9bbc0;
+}
+
+
 .ScrapbookPageCardAddImg-item {
    text-align: center !important;
    margin: auto !important;
@@ -68,7 +78,9 @@
 }
 
 .ScrapbookPageContent-delete-item {
-   margin-top: 5px;
+   transform: scale(2.3);
+   color: #40454b;
+   margin-top: 20px;
 }
 
 .ScrapbookPageContent-delete-item:hover {
