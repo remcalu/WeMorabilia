@@ -1,7 +1,6 @@
 import {AppBar, Box, Toolbar, Button} from '@mui/material';
 import HomeIcon from '@mui/icons-material/Home';
 import PanoramaIcon from '@mui/icons-material/Panorama';
-import InfoIcon from '@mui/icons-material/Info';
 import LogoutIcon from '@mui/icons-material/Logout';
 import LoginIcon from '@mui/icons-material/Login';
 
@@ -25,7 +24,6 @@ function Navbar() {
           <div className="Navbar-section-middle">
             <Button className="Navbar-button" href='/home' variant="contained"> Home </Button>
             <Button className="Navbar-button" href='/scrapbook' variant="contained"> Scrapbook </Button>
-            <Button className="Navbar-button" variant="contained"> About </Button>
           </div>
           <div className="Navbar-section-side">
             {isLoggedIn ?
@@ -38,7 +36,6 @@ function Navbar() {
           <div className="Navbar-section-middle">
             <HomeIcon className="Navbar-dropdown-button" onClick={() => redirectLink('/home')}/>
             <PanoramaIcon className="Navbar-dropdown-button" onClick={() => redirectLink('/scrapbook')}/>
-            <InfoIcon className="Navbar-dropdown-button"/>
             {isLoggedIn ?
               <LogoutIcon className="Navbar-dropdown-button" onClick={signOut}/> :
               <LoginIcon className="Navbar-dropdown-button" onClick={() => redirectLink('/authenticate')}/>

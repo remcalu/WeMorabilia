@@ -17,19 +17,7 @@ test('renders Navbar main titlebar button PanoramaIcon', () => {
   expect(selectedElement).toBeInTheDocument();
 });
 
-test('renders Navbar main titlebar button PeopleIcon', () => {
-  render(<Navbar/>);
-  const selectedElement = screen.getByTestId('PeopleIcon');
-  expect(selectedElement).toBeInTheDocument();
-});
-
-test('renders Navbar main titlebar button HomeIcon', () => {
-  render(<Navbar/>);
-  const selectedElement = screen.getByTestId('InfoIcon');
-  expect(selectedElement).toBeInTheDocument();
-});
-
-test('renders Navbar main titlebar button HomeIcon', () => {
+test('renders Navbar main titlebar button LoginIcon', () => {
   render(<Navbar/>);
   const selectedElement = screen.getByTestId('LoginIcon');
   expect(selectedElement).toBeInTheDocument();
