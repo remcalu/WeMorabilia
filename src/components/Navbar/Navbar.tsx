@@ -1,8 +1,3 @@
-import './Navbar.css';
-import useUserStatus from '../../utils/useUserStatus';
-import signOut from '../../utils/signOut';
-import redirectLink from '../../utils/redirectLink';
-import logo from '../../resources/WMSquare.jpg';
 import {AppBar, Box, Toolbar, Button} from '@mui/material';
 import HomeIcon from '@mui/icons-material/Home';
 import PanoramaIcon from '@mui/icons-material/Panorama';
@@ -10,6 +5,12 @@ import PeopleIcon from '@mui/icons-material/People';
 import InfoIcon from '@mui/icons-material/Info';
 import LogoutIcon from '@mui/icons-material/Logout';
 import LoginIcon from '@mui/icons-material/Login';
+
+import './Navbar.css';
+import useUserStatus from '../../utils/useUserStatus';
+import signOut from '../../utils/signOut';
+import redirectLink from '../../utils/redirectLink';
+import logo from '../../resources/WMSquare.jpg';
 
 function Navbar() {
   const userStatus = useUserStatus();
@@ -37,13 +38,13 @@ function Navbar() {
         </Toolbar>
         <Toolbar className="Navbar-dropdown">
           <div className="Navbar-section-middle">
-            <HomeIcon className="Navbar-dropdown-button" sx={{fontSize: 33}} onClick={() => redirectLink('/home')}/>
-            <PanoramaIcon className="Navbar-dropdown-button" sx={{fontSize: 33}} onClick={() => redirectLink('/scrapbook')}/>
-            <PeopleIcon className="Navbar-dropdown-button" sx={{fontSize: 33}}/>
-            <InfoIcon className="Navbar-dropdown-button" sx={{fontSize: 33}}/>
+            <HomeIcon className="Navbar-dropdown-button" onClick={() => redirectLink('/home')}/>
+            <PanoramaIcon className="Navbar-dropdown-button" onClick={() => redirectLink('/scrapbook')}/>
+            <PeopleIcon className="Navbar-dropdown-button"/>
+            <InfoIcon className="Navbar-dropdown-button"/>
             {isLoggedIn ?
-              <LogoutIcon className="Navbar-dropdown-button" sx={{fontSize: 33}} onClick={signOut}/> :
-              <LoginIcon className="Navbar-dropdown-button" sx={{fontSize: 33}} onClick={() => redirectLink('/authenticate')}/>
+              <LogoutIcon className="Navbar-dropdown-button" onClick={signOut}/> :
+              <LoginIcon className="Navbar-dropdown-button" onClick={() => redirectLink('/authenticate')}/>
             }
           </div>
         </Toolbar>

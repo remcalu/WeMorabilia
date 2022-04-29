@@ -1,6 +1,5 @@
 .HomePageGreeting-header {
    background-color: #212226;
-   min-height: 100vh;
    display: flex;
    flex-direction: column;
    align-items: center;

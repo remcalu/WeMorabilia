@@ -1,14 +1,13 @@
 # WIP
 
-## Techologies
+## Implemented techologies
 ````
-React
-Redux
-Material UI
-Jest
-React testing library
-Amplfiy
-GraphQL
+- [x] React
+- [X] Material UI
+- [x] GraphQL
+- [x] Jest
+- [x] React testing library
+- [ ] Redux
 ````
 
 ## Available Scripts
