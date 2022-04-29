@@ -1,0 +1,65 @@
+.ScrapbookPageAdd {
+   text-align: center;
+   margin: auto;
+   display: flex;
+   flex-direction: column;
+   align-content: space-around !important;
+   justify-content: center !important;
+   background-color: #40454b !important;
+   width: 250px !important;
+   height: 300px !important;
+}
+
+.ScrapbookPageAdd-button {
+   margin-left: 10px !important;
+   margin-top: 5px !important;
+   margin-right: 10px !important;
+   margin-bottom: 5px !important;
+   background-color: #363940 !important;
+}
+
+.ScrapbookPageAdd-upload {
+   margin-top: 20px;
+   transform: scale(4);
+   color: white;
+}
+
+.ScrapbookPageAdd-upload:hover {
+   color: #b9bbc0;
+}
+
+
+.ScrapbookPageAdd-item {
+   text-align: center !important;
+   margin: auto !important;
+}
+
+.ScrapbookPageAdd-item-input {
+   width: 80%;
+   border-radius: 5px;
+   font-size: 15px;
+   padding-top: 6px;
+   padding-bottom: 6px;
+   background-color: #363940;
+   border-width: 1px;
+   margin-bottom: 10px !important;
+   border-color: white !important;
+   color: white !important;
+   text-align: center !important;
+}
+
+.ScrapbookPageAdd-item-input::placeholder {
+   color: white;
+}
+
+.ScrapbookPageAdd-item-input:focus {
+   outline: none !important;
+}
+
+.ScrapbookPageAdd-fade-in {
+   animation: fadeIn linear 333ms;
+   -webkit-animation: fadeIn linear 333ms;
+   -moz-animation: fadeIn linear 333ms;
+   -o-animation: fadeIn linear 333ms;
+   -ms-animation: fadeIn linear 333ms;
+}
