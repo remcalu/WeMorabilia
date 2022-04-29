@@ -1,11 +1,11 @@
 import {API, Storage} from 'aws-amplify';
 import {useState, useEffect} from 'react';
-import {Grid, Card, Button} from '@mui/material';
-import FileUploadIcon from '@mui/icons-material/FileUpload';
+import {Grid} from '@mui/material';
 import CancelIcon from '@mui/icons-material/Cancel';
 
 import './ScrapbookPageContent.css';
 import ScrapbookPageCard from '../ScrapbookPageCard/ScrapbookPageCard';
+import ScrapbookPageAdd from '../ScrapbookPageAdd/ScrapbookPageAdd';
 import {listImageEntries} from '../../graphql/queries';
 import {createImageEntry as createImageEntryMutation, deleteImageEntry as deleteImageEntryMutation} from '../../graphql/mutations';
 
@@ -57,7 +57,7 @@ function ScrapbookPageContent() {
     await API.graphql({query: deleteImageEntryMutation, variables: {input: {id}}});
   }
 
-  async function onChange(e) {
+  async function onChangeForm(e) {
     if (!e.target.files[0]) return;
     const file = e.target.files[0];
     setFormData({...formData, image: file.name});
@@ -74,32 +74,21 @@ function ScrapbookPageContent() {
       <div className="ScrapbookPageContent-body">
         <Grid className="ScrapbookPageContent-grid" container spacing={3}>
           <Grid item xs="auto">
-            <Card className="ScrapbookPageCardAddImg ScrapbookPageCardAddImg-fade-in" variant="elevation">
-              <div className='ScrapbookPageCardAddImg-item'>
-                <FileUploadIcon className="ScrapbookPageCardAddImg-upload" onClick={clickUpload}/>
-                <input id="fileUpload" type="file" hidden onChange={onChange}/>
-              </div>
-              <div>
-                <input
-                  className='ScrapbookPageCardAddImg-item ScrapbookPageCardAddImg-item-input'
-                  onChange={(e) => setFormData({...formData, 'description': e.target.value})}
-                  placeholder="Description"
-                  value={formData.description}
-                />
-                <input
-                  type="date"
-                  className='ScrapbookPageCardAddImg-item ScrapbookPageCardAddImg-item-input'
-                  onChange={(e) => setFormData({...formData, 'date': e.target.value})}
-                  placeholder="Date"
-                  value={formData.date}
-                />
-              </div>
-              <Button variant="contained" className="ScrapbookPageCardAddImg-button ScrapbookPageCardAddImg-item" onClick={createImageEntry}>Add Image</Button>
-            </Card>
+            <ScrapbookPageAdd
+              formData={formData}
+              clickUpload={clickUpload}
+              onChangeForm={onChangeForm}
+              setFormData={setFormData}
+              createImageEntry={createImageEntry}
+            />
           </Grid>
           {imageEntries.map((imageEntry) =>
             <Grid item xs="auto" zeroMinWidth>
-              <ScrapbookPageCard image={imageEntry.image} text={imageEntry.description} date={imageEntry.date}/>
+              <ScrapbookPageCard
+                image={imageEntry.image}
+                text={imageEntry.description}
+                date={imageEntry.date}
+              />
               <CancelIcon className="ScrapbookPageContent-delete-item" onClick={() => deleteImageEntry(imageEntry)}/>
             </Grid>
           )}

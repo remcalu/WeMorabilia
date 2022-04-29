@@ -58,7 +58,7 @@
    }
 
    .Navbar-dropdown-button:hover {
-      color: #b9bbc0 !important;
+      color: #b9bbc0;
       margin-left: 10px;
       margin-right: 10px;
    }
