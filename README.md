@@ -24,7 +24,7 @@ Generates amplify GraphQL code by running `amplify codegen`, and then launches t
 Builds the app for production to the `build` folder. It correctly bundles React in production mode and optimizes the build for the best performance. The build is minified and the filenames include the hashes, the app is ready to be deployed.
 
 ## Website Wireframe Sketch
-This section is dedicated to the wireframes that I quickly drew up to give a basic preliminary idea of how the website will be setup
+This section is dedicated to the wireframes that I quickly drew up to give a basic preliminary idea of how the website could look
 
 #### Home Page
 ![Home Page](https://i.imgur.com/nEes1MO.png)
